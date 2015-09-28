@@ -15,7 +15,9 @@ angular.module('turingWeb').directive('navbar',function(){
 		    };
 
 		    scope.collapse = function(){
-		    	angular.element('.navbar-toggle').click();
+                if (angular.element('.navbar-toggle').attr('aria-expanded') === 'true'){
+    		    	angular.element('.navbar-toggle').click();
+                }
 		    };
 
         }
