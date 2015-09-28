@@ -49,8 +49,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/less/{,*/}*.less'],
+        tasks: ['less','newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -153,6 +153,20 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
+    // Compile less into css
+    less: {
+      development: {
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2
+        },
+        files: {
+          "<%= yeoman.app %>/styles/main.css": "<%= yeoman.app %>/less/main.less" // destination file and source file
+        }
+      }
+    },
+
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
@@ -176,6 +190,22 @@ module.exports = function (grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
+      }
+    },
+
+    // Inject all asset dependencies
+    injector: {
+      local_dependencies: {
+        files: {
+          '<%= yeoman.app %>/index.html': [
+            '<%= yeoman.app %>/**/*.js',
+            '<%= yeoman.app %>/**/*.css'
+            ]
+        }
+      },
+      options : {
+        ignorePath: '<%= yeoman.app %>',
+        addRootSlash: false
       }
     },
 
@@ -416,7 +446,9 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'less',
       'wiredep',
+      'injector',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -431,7 +463,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    'less',
     'wiredep',
+    'injector',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
@@ -440,7 +474,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'less',
     'wiredep',
+    'injector',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

@@ -1,0 +1,240 @@
+// these variables should be placed in global variables
+
+/*
+Base
+Layout
+Module
+State
+Theme
+*/
+
+.full {
+  height: 100%;
+}
+
+.wide {
+    width: 100%;
+}
+
+/* =============================================================================
+Colour Classes
+============================================================================= */
+
+.blue {
+  color: @fakeBlue;
+}
+.yellow {
+  color: @turingYellow;
+}
+.white {
+  color: @white;
+}
+
+/* =============================================================================
+Section Styles
+============================================================================= */
+
+
+.blue-section {
+  background-color: @fakeBlue;
+}
+.white-section {
+  background-color: @white;
+  p {
+    color: @darkGrey;
+  }
+  h5 {
+    color: @white;
+    font-weight: 100;
+  }
+}
+
+/* =============================================================================
+Useful classes
+============================================================================= */
+
+.vertical-center {
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.info_paragraph {
+  padding-bottom: 30px;
+}
+
+/* =============================================================================
+Override Classes
+============================================================================= */
+
+
+p {
+  font-size: 15px;
+}
+section {
+  min-height: 100%;
+}
+.team-member {
+  img {
+    max-height: 225px;
+  }
+}
+.section-heading {
+  padding-bottom: 40px;
+}
+.social-buttons {
+  padding: 20px;
+}
+.detail-text {
+  margin: 10px;
+}
+.large {
+  font-size: 16px;
+}
+
+/* =============================================================================
+Turing Title Section
+============================================================================= */
+
+
+.turing-navbar {
+  background-color: @fakeBlue;
+}
+
+.turing-orb {
+  background-color: @fakeBlue;
+  border-radius: 50%;
+  height: 320px;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 320px;
+  min-width: 320px;
+  position: relative;
+  width: 320px;
+}
+
+@media (max-width: 320px) {
+  
+  .turing-orb { width: 275px;
+      height: 275px;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      min-height: 275px;
+      min-width: 275px;
+    }
+  }
+
+.turing-title {
+  height: 40%;
+  padding: 20% 10%;
+}
+.turing-tagline {
+  font-size: 21px;
+  height: 60%;
+  padding: 20% 10%;
+}
+.orb-logo {
+  width:100%;
+}
+.header-logo {
+  height: 100%;
+}
+
+#contact-us {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+  padding-top: 10px;
+}
+
+/* =============================================================================
+Buttons
+============================================================================= */
+
+.btn-center {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-turing{
+  .btn-mixin-basic(none);
+}
+
+.btn-turing-blue {
+  .btn-mixin-basic(1px solid @turingBlue);
+  &:hover {
+    border-color: @turingYellow;
+  }
+}
+
+//.btn-turing a, .btn-turing-blue a {
+//  color: inherit;
+//  font-size: 21px;
+//  line-height: 25px;
+//  &:hover {
+//    text-decoration: none;
+//  }
+//}
+
+.btn-turing-basic {
+  background-color: white;
+  margin-top: 40px;
+  padding: 12px 20px;
+  border: none;
+  color: #2f7ac7;
+}
+
+.btn-link .btn-turing-basic  {
+  color: inherit;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  color: @turingYellow;
+}
+
+.btn-turing-basic:hover {
+  text-decoration: none;
+  color: #FED136;
+}
+
+.btn-link {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* =============================================================================
+Footer
+==================
+=========================================================== */
+
+#twitter-footer {
+    text-align: center;
+    margin: 80px auto 0 auto;
+    color: #2f7ac7;
+
+    display: block;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+  &:hover {
+    color: #FED136;
+  }
+}
+
+#twitter-footer a, #twitter-footer a:hover {
+    color: inherit;
+}

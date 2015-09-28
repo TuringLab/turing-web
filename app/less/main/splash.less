@@ -1,0 +1,141 @@
+.splash-logo{
+  max-width: 350px;
+  float: right;
+  display: block;
+  margin-right: 0px;
+  padding-top: 30px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+
+#splash-saturday {
+  float: right;
+  margin-right: 22px;
+}
+
+#splash-saturday h2 {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: -20px;
+}
+
+#splash-summary {
+  float: right;
+  margin-right: 20px;
+  & p {
+    text-align: right;
+    font-size: 13px;
+  }
+}
+
+.splash-sphere {
+    color: #2A78BD;
+    background-color: white;
+
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+
+    margin: 0px auto 20px auto;
+}
+
+.splash-sphere h2 {
+  padding-top: 50px;
+}
+
+.splash-description {
+  padding: 10px 0px;
+}
+
+.sphere-image{
+  max-height: 120px;
+  margin: auto;
+}
+
+.content-upper {
+  padding: 0px 10px;
+  & p {
+    font-size: 14px;
+  }
+}
+
+.content-middle {
+  padding: 0px 30px;
+  & p {
+    font-size: 14px;
+  }
+}
+
+.content-lower {
+  padding: 0px 60px;
+  & p {
+    font-size: 14px;
+  }
+}
+
+.age-style {
+  font-size: 20px;
+}
+
+
+.splash-header {
+    // background-image: url(../images/header-bg.jpg);
+    background-repeat: none;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: @white
+}
+.splash-header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px
+}
+
+.splash-header .intro-text .intro-lead-in {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 25px;
+    background-color: @turingBlue;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0.9;
+
+}
+.splash-header .intro-text .intro-heading {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*text-transform: uppercase;*/
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 25px
+}
+
+.btn-turing-splash {
+  .btn-mixin-basic(1px solid @turingBlue);
+  margin-top:0px;
+  color:white;
+  background-color: @turingBlue;
+  &:hover {
+    border-color: @turingYellow;
+    & a {
+      color: @turingYellow;
+      text-decoration: none;
+    }
+  }
+}
+
+#bad-btn-margin {
+  margin-top: -150px;
+}
