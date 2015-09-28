@@ -1,11 +1,9 @@
 'use strict';
 
-angular.module('turingWeb').controller('MainController',['$scope','$document','$location','$timeout','$anchorScroll',MainController]);
+angular.module('turingWeb')
+  .controller('MainController',['$scope',function($scope){
 
-function MainController($scope,$document,$location,$timeout,$anchorScroll){
-
-    var display = true;
-    var scroll = $document.scrollTop();
+    var section;
 
     $scope.sections = [
         'overview',
@@ -17,33 +15,17 @@ function MainController($scope,$document,$location,$timeout,$anchorScroll){
         // 'contact' 
     ];
 
-    $scope.scroll = function(element){
-        var section = element.id;
-        $location.hash(section);
-        $scope.$apply();
-    };
-
-    $scope.navClass = function(name){
-        if (($location.hash() == name) && (display)){
+    $scope.navClass = function(_section){
+        if (section == _section){
             return 'active';
-        } else {
-            return '';
-        };
+        }
+    }
+
+    $scope.inView = function(_section,inview){
+        if (inview){
+            console.log(_section);
+            section = _section;
+        }
     };
 
-    $document.on('scroll', function() {
-      if (scroll != $document.scrollTop()){
-        display = false;
-        $scope.$apply();
-      };
-    });
-
-    angular.element(document).ready(function(){
-        $timeout(function(){
-            $anchorScroll();
-            scroll = $document.scrollTop();
-            display = true;
-        });
-    });
-
-}
+}]);
