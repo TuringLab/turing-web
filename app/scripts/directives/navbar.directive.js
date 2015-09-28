@@ -6,17 +6,16 @@ angular.module('turingWeb').directive('navbar',function(){
         restrict: 'AE',
         templateUrl: 'views/navbar.html',
         scope: { navigation: '=navigation' },
-        link: function(scope,element){
+        link: function(scope){
 
     	    scope.navClass = function(_section){
-		        if (scope.navigation.active == _section){
+		        if (scope.navigation.section === _section){
 		            return 'active';
 		        }
 		    };
 
 		    scope.collapse = function(){
-		    	console.log('collapse',element,angular.element('.navbar-toggle'));
-		    	element,angular.element('.navbar-toggle').click();
+		    	angular.element('.navbar-toggle').click();
 		    };
 
         }

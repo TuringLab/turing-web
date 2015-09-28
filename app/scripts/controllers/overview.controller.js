@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('OverviewController',['$scope',OverviewController]);
-
-function OverviewController($scope){
+angular.module('turingWeb').controller('OverviewController',['$scope',function($scope){
 
     $scope.heading = "TuringLab";
 
@@ -19,4 +17,4 @@ function OverviewController($scope){
         },
     ];
 
-}
+}]);

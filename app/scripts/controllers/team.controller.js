@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('TeamController',['$scope',TeamController]);
-
-function TeamController($scope){
+angular.module('turingWeb').controller('TeamController',['$scope',function($scope){
 
     $scope.heading = 'Team';
 
@@ -72,4 +70,4 @@ function TeamController($scope){
         }
     ];
 
-}
+}]);

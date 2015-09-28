@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('TechnologyController',['$scope',TechnologyController]);
-
-function TechnologyController($scope){
+angular.module('turingWeb').controller('TechnologyController',['$scope',function($scope){
 
     $scope.heading = 'Technology';
 
@@ -33,4 +31,4 @@ function TechnologyController($scope){
         }
     ];
 
-}
+}]);

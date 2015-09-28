@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('LaboratoriesController',['$scope',LaboratoriesController]);
-
-function LaboratoriesController($scope){
+angular.module('turingWeb').controller('LaboratoriesController',['$scope',function($scope){
 
     $scope.heading = 'Laboratories';
 
@@ -21,7 +19,7 @@ function LaboratoriesController($scope){
             return 'col-sm-6 col-xs-12';
         } else {
             return 'col-xs-12';
-        };
+        }
     };
 
     $scope.labs = [
@@ -36,16 +34,16 @@ function LaboratoriesController($scope){
                 content: 'KS2 & Scratch',
                 time: '10.00 - 13.00',
                 prices: {
-                    left: Price(225,3,10),
-                    right: Price(30,3,1)
+                    left: new Price(225,3,10),
+                    right: new Price(30,3,1)
                 }
             },{
                 name: 'Afternoon',
                 content: 'KS3 & Python',
                 time: '14.00 - 17.00',
                 prices: {
-                    left: Price(225,3,10),
-                    right: Price(30,3,1)
+                    left: new Price(225,3,10),
+                    right: new Price(30,3,1)
                 }
             }
         ]
@@ -64,12 +62,12 @@ function LaboratoriesController($scope){
                 content: 'KS2 & KS3',
                 time: '2 hours',
                 prices: {
-                    left: Price(150,2,10),
-                    right: Price(20,2,1)
+                    left: new Price(150,2,10),
+                    right: new Price(20,2,1)
+                    }
                 }
-            }
-        ]
-    }
-];
+            ]
+        }
+    ];
 
-}
+}]);

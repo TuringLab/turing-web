@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('FaqController',['$scope',FaqController]);
-
-function FaqController($scope){
+angular.module('turingWeb').controller('FaqController',['$scope',function($scope){
 
     $scope.heading = 'FAQ';
 
@@ -30,4 +28,4 @@ function FaqController($scope){
         }
     ];
 
-}
+}]);

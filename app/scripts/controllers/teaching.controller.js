@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('TeachingController',['$scope',TeachingController]);
-
-function TeachingController($scope){
+angular.module('turingWeb').controller('TeachingController',['$scope',function($scope){
 
     $scope.heading = 'Teaching';
 
@@ -31,4 +29,4 @@ function TeachingController($scope){
         }
     ];
 
-}
+}]);

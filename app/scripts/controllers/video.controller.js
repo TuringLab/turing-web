@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('turingWeb').controller('VideoController',['$scope','$sce',VideoController]);
-
-function VideoController($scope,$sce){
+angular.module('turingWeb').controller('VideoController',['$scope','$sce',function($scope,$sce){
 
     var videos = [{
         name: 'Code Campaign',
@@ -28,7 +26,7 @@ function VideoController($scope,$sce){
         name: 'An inspired 12 year old',
         summary: 'Tomas Suarez talks at TED about being an app developer, and his role in setting up a club at school to help others make apps',
         link: 'https://www.youtube.com/embed/Fkd9TWUtFm0?rel=0&amp;start=0&amp;autoplay=0&amp;iv_load_policy=3&amp;autohide=1&amp;cc_load_policy=0&amp;showinfo=0'
-    }]
+    }];
 
     // Make links safe for angular
     $scope.videos = [];
@@ -37,4 +35,4 @@ function VideoController($scope,$sce){
         $scope.videos.push(video);
     });
     
-};
+}]);
