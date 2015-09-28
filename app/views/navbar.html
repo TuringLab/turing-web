@@ -16,8 +16,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="navClass(section)" ng-repeat="section in sections">
-                    <a class="page-scroll text-capitalize" href='' scroll-to="{{section}}" callback-after="scroll">{{section}}</a>
+                <li ng-class="navClass(section)" ng-repeat="section in navigation.sections">
+                    <a class="page-scroll text-capitalize" href='' scroll-to="{{section}}" callback-after="collapse">{{section}}</a>
                 </li>
             </ul>
         </div>

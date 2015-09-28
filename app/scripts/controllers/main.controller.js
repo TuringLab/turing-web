@@ -3,28 +3,21 @@
 angular.module('turingWeb')
   .controller('MainController',['$scope',function($scope){
 
-    var section;
-
-    $scope.sections = [
-        'overview',
-        'teaching',
-        // 'technology',
-        'laboratories',
-        'team',
-        'subscribe'
-        // 'contact' 
-    ];
-
-    $scope.navClass = function(_section){
-        if (section == _section){
-            return 'active';
-        }
-    }
+    $scope.navigation = {
+        section: null,
+        sections: [
+            'overview',
+            'teaching',
+            'laboratories',
+            'team',
+            'subscribe'
+        ]
+    };
 
     $scope.inView = function(_section,inview){
         if (inview){
-            console.log(_section);
-            section = _section;
+            $scope.navigation.section = _section;
+            console.log($scope.navigation.section);
         }
     };
 
