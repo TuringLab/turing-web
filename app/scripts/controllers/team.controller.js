@@ -9,7 +9,7 @@ function TeamController($scope){
     $scope.team = [
         {
             name: 'Henry Miskin',
-            image: 'assets/images/team/henrym.jpg',
+            image: 'images/team/henrym.jpg',
             about: 'Henry wants to share his passion for problem solving in engineering and computing with upcoming inventors.',
             degrees : [{
                 name: 'MSc Computer Science',
@@ -22,7 +22,7 @@ function TeamController($scope){
             email: 'mailto:hpgmiskin@turinglab.co.uk'
         // },{
         //     name: 'Tom Murray',
-        //     image: 'assets/images/team/tom.jpg',
+        //     image: 'images/team/tom.jpg',
         //     degrees : [{
         //         name: 'MSc Computer Science',
         //         university: ' Imperial College London'
@@ -33,7 +33,7 @@ function TeamController($scope){
         },{
             name: 'Sam Green',
             about: 'Sam looks forward to passing on an enthusiasm for design and technology to a new generation of innovators.',
-            image: 'assets/images/team/sam.jpg',
+            image: 'images/team/sam.jpg',
             degrees : [{
                 name: 'MSc Computer Science',
                 university: ' Imperial College London'
@@ -46,7 +46,7 @@ function TeamController($scope){
         },{
             name: 'Priyav Shah',
             about: 'Priyav is driven by getting kids excited about the power of technology.',
-            image: 'assets/images/team/priyav.jpg',
+            image: 'images/team/priyav.jpg',
             degrees : [{
                 name: 'MSc Computer Science',
                 university: ' Imperial College London'
@@ -59,7 +59,7 @@ function TeamController($scope){
         },{
             name: 'Henry Lake',
             about: 'Henry enjoys bringing games to life through the application of physics.',
-            image: 'assets/images/team/henryl.jpg',
+            image: 'images/team/henryl.jpg',
             degrees : [{
                 name: 'MSc Computer Science',
                 university: ' Imperial College London'
