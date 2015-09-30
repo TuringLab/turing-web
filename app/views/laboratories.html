@@ -25,23 +25,21 @@
                         </div> -->
                     </div>
                 </div>
-                    <div ng-if="lab.link">
-                        <div class="row">
-                            <a class = "btn-link" href="http://code.doc.ic.ac.uk">
-                                <div class="btn btn-padding btn-turing-basic btn-center">
-                                    {{lab.link}}
-                                </div>
+                    <div class="row" ng-if="lab.link">
+                        <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
+                            <a class="btn btn-lg btn-turing col-xs-12" href="http://code.doc.ic.ac.uk">
+                                {{lab.link}}
                             </a>
                         </div>
                     </div>
-                    <div ng-if="lab.mail">
-                        <div class="row">
-                            <a class="btn-link" href="mailto:info@turinglab.co.uk?Subject=Possible%20school" target="_top">
-                                <div class="btn btn-padding btn-turing-basic btn-center">
-                                    {{lab.mail}}
-                                </div>
+                    <div class="row" ng-if="lab.mail">
+                        <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
+                            <a class="btn btn-lg btn-turing col-xs-12" href="mailto:info@turinglab.co.uk?Subject=Possible%20school" target="_top">
+                                {{lab.mail}}
                             </a>
-                            <div id="contact-us"> if you would like us to come to your school, or to learn more about these sessions. </div>
+                        </div>
+                        <div id="contact-us" class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12">
+                            if you would like us to come to your school, or to learn more about these sessions.
                         </div>
                     </div>
                 </div>

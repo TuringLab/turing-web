@@ -16,8 +16,8 @@ angular.module('turingWeb').controller('TeamController',['$scope',function($scop
                 name: 'BEng Mechanical Engineering',
                 university: 'University of Southampton'
             }],
-            linkedin: 'https://uk.linkedin.com/in/hpgmiskin',
-            email: 'mailto:hpgmiskin@turinglab.co.uk'
+            linkedin: 'https://uk.linkedin.com/in/hpgmiskin'
+            // email: 'mailto:hpgmiskin@turinglab.co.uk'
         // },{
         //     name: 'Tom Murray',
         //     image: 'images/team/tom.jpg',
@@ -39,8 +39,8 @@ angular.module('turingWeb').controller('TeamController',['$scope',function($scop
                 name: 'BA Architecture',
                 university: 'University of Cambridge'
             }],
-            linkedin: 'https://uk.linkedin.com/in/greensamuel',
-            email: 'mailto:sam@turinglab.co.uk'
+            linkedin: 'https://uk.linkedin.com/in/greensamuel'
+            // email: 'mailto:sam@turinglab.co.uk'
         },{
             name: 'Priyav Shah',
             about: 'Priyav is driven by getting kids excited about the power of technology.',
@@ -52,8 +52,8 @@ angular.module('turingWeb').controller('TeamController',['$scope',function($scop
                 name: 'BA Psychology',
                 university: 'University of York'
             }],
-            linkedin: 'https://www.linkedin.com/in/priyavshah91',
-            email: 'mailto:priyav@turinglab.co.uk'
+            linkedin: 'https://www.linkedin.com/in/priyavshah91'
+            // email: 'mailto:priyav@turinglab.co.uk'
         },{
             name: 'Henry Lake',
             about: 'Henry enjoys bringing games to life through the application of physics.',
@@ -65,8 +65,8 @@ angular.module('turingWeb').controller('TeamController',['$scope',function($scop
                 name: 'MEng Physics',
                 university: 'Imperial College London'
             }],
-            // linkedin: 'https://uk.linkedin.com/in/hpgmiskin',
-            email: 'mailto:henry@turinglab.co.uk'
+            linkedin: '#'
+            // email: 'mailto:henry@turinglab.co.uk'
         }
     ];
 
