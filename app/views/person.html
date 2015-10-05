@@ -1,6 +1,11 @@
 <div class="team-member">
     <img ng-src="{{person.image}}" class="img-responsive img-circle" alt="">
     <h4 class="yellow">{{person.name}}</h4>
+    <div ng-if="person.position">
+        <p></p>
+        <strong class="large">{{person.position.heading}}</strong>
+        <p class="large">{{person.position.detail}}</p>
+    </div>
     <ul class="list-inline social-buttons">
         <li ng-if="person.homepage">
             <a href="{{person.homepage}}"><i class="fa fa-home"></i></a>
@@ -20,8 +25,8 @@
     </ul>
     <div>
         <div ng-repeat="position in person.positions">
-            <strong class="large">{{position.name}}</strong>
-            <p class="large">{{position.location}}</p>
+            <strong class="large">{{position.heading}}</strong>
+            <p class="large">{{position.detail}}</p>
         </div>
         <p>{{person.about}}</p>
     </div>
