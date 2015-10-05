@@ -10,6 +10,7 @@ angular.module('turingWeb')
             'teaching',
             'laboratories',
             'team',
+            'advisors',
             'subscribe'
         ]
     };

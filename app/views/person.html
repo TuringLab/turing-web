@@ -1,0 +1,28 @@
+<div class="team-member">
+    <img ng-src="{{person.image}}" class="img-responsive img-circle" alt="">
+    <h4 class="yellow">{{person.name}}</h4>
+    <ul class="list-inline social-buttons">
+        <li ng-if="person.homepage">
+            <a href="{{person.homepage}}"><i class="fa fa-home"></i></a>
+        </li>
+        <li ng-if="person.twitter">
+            <a href="{{person.twitter}}"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li ng-if="person.facebook">
+            <a href="{{person.facebook}}"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li ng-if="person.linkedin">
+            <a href="{{person.linkedin}}"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li ng-if="person.email">
+            <a href="{{person.email}}"><i class="fa fa-envelope"></i></a>
+        </li>
+    </ul>
+    <div>
+        <div ng-repeat="position in person.positions">
+            <strong class="large">{{position.name}}</strong>
+            <p class="large">{{position.location}}</p>
+        </div>
+        <p>{{person.about}}</p>
+    </div>
+</div>
