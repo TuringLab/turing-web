@@ -2,9 +2,10 @@
     <img ng-src="{{person.image}}" class="img-responsive img-circle" alt="">
     <h4 class="yellow">{{person.name}}</h4>
     <div ng-if="person.position">
-        <p></p>
-        <strong class="large">{{person.position.heading}}</strong>
-        <p class="large">{{person.position.detail}}</p>
+        <br/>
+        <em class="large">{{person.position.role}}</em><br/>
+        <strong class="large">{{person.position.department}}</strong>
+        <p class="large">{{person.position.university}}</p>
     </div>
     <ul class="list-inline social-buttons">
         <li ng-if="person.homepage">
