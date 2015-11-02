@@ -11,18 +11,14 @@
                 <p class="lead">@ {{lab.location}}</p>
                 <div class="row lab-slots">
                     <div class="lab-slot" ng-class="style(lab.slots)" ng-repeat="slot in lab.slots">
-                        <div class="lab-sphere">
+                        <div ng-class="slot.style">
                             <div class="lab-sphere-text vertical-center">
                                 <h4>{{slot.name}}</h4>
-                                <p>{{slot.content}}</p>
                                 <p>{{slot.time}}</p>
+                                <p>{{slot.content}}</p>
+                                <p>{{slot.age}}</p>
                             </div>
                         </div>
-<!--                         <div class="lab-prices" ng-if="slot.prices">
-                            <h4>Session Prices</h4>
-                            <div class="lab-price lab-price-left" price="slot.prices.left">
-                            </div><div class="lab-price lab-price-right" price="slot.prices.right"></div>
-                        </div> -->
                     </div>
                 </div>
                     <div class="row" ng-if="lab.link">
@@ -43,13 +39,6 @@
                         </div>
                     </div>
                 </div>
-<!--                 <div class="row lab-detail" ng-if="lab.about">
-                    <h4>Session Prices</h4>
-                    <p class="lead">{{lab.about}}</p>
-                    <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-6 col-xs-offset-3">
-                        <p>{{lab.detail}}</p>
-                    </div>
-                </div> -->
             </div>
         </div>
 </div>

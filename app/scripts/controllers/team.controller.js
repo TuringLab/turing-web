@@ -49,7 +49,7 @@ angular.module('turingWeb').controller('TeamController',['$scope',function($scop
                 heading: 'MSc Computer Science',
                 detail: ' Imperial College London'
             },{
-                heading: 'MEng Physics',
+                heading: 'MSci Physics',
                 detail: 'Imperial College London'
             }],
             linkedin: '#'

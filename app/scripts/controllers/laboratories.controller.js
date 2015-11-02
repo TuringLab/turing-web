@@ -26,48 +26,31 @@ angular.module('turingWeb').controller('LaboratoriesController',['$scope',functi
     {
         name: 'Saturdays',
         location: 'Imperial College London',
-        style: 'col-md-6 col-sm-12 col-xs-12',
+        style: 'col-md-12 col-sm-12 col-xs-12',
         link: "Learn more",
         slots: [
             {
-                name: 'Morning',
-                content: 'KS2 & Scratch',
-                time: '10.00 - 13.00',
+                name: 'Outreach',
+                content: 'For students in receipt of free school meals or Pupil Premium support.',
+                time: '10.00 - 12.00',
+                style: 'lab-sphere',
+                age: 'Ages 8 - 13',
                 prices: {
                     left: new Price(225,3,10),
                     right: new Price(30,3,1)
                 }
             },{
-                name: 'Afternoon',
-                content: 'KS3 & Python',
-                time: '14.00 - 17.00',
+                name: 'Girls',
+                content: 'Because Coding shouldn’t be a boys club. Showing that girls make great coders too.',
+                time: '13.00 - 15.00',
+                style: 'lab-sphere',
+                age: 'Ages 8 - 13',
                 prices: {
                     left: new Price(225,3,10),
                     right: new Price(30,3,1)
                 }
             }
         ]
-    },{
-        name: 'Weekdays',
-        location: 'your local school',
-        style: 'col-md-6 col-sm-12 col-xs-12',
-        mail: "Contact us",
-        slots: [
-            {
-                name: 'During-School',
-                content: 'KS2 & KS3',
-                time: '1-3 hours'
-            },{
-                name: 'After-School',
-                content: 'KS2 & KS3',
-                time: '2 hours',
-                prices: {
-                    left: new Price(150,2,10),
-                    right: new Price(20,2,1)
-                    }
-                }
-            ]
-        }
-    ];
+    }];
 
 }]);
