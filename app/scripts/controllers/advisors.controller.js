@@ -10,7 +10,7 @@ angular.module('turingWeb').controller('AdvisorsController',['$scope',function($
 			return 'col-xs-offset-1 col-md-offset-0 col-sm-offset-3';
 		}
 		return 'col-xs-offset-1 col-md-offset-0 col-sm-offset-0';
-	}
+	};
 
 	$scope.heading = 'Advisors';
 	$scope.advisors = [
